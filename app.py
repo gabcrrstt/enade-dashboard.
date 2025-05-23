@@ -74,7 +74,3 @@ def update_graphs(selected_uf):
 # Rodar o app
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-
-pip install pandas dash plotly openpyxl
