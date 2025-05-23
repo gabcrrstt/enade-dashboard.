@@ -7,6 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1F6zzINpqu672miZkikJbqmT4SeLZ4rig
 """
 
+import os
 import pandas as pd
 import dash
 from dash import dcc, html
@@ -71,6 +72,8 @@ def update_graphs(selected_uf):
 
     return bar_fig, scatter_fig
 
-# Rodar o app
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 8050))  # usa a porta do ambiente
+    app.run(host="0.0.0.0", port=port, debug=True)
+
